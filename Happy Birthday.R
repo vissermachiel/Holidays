@@ -1,3 +1,4 @@
+# Load packages
 library(dplyr)
 library(ggplot2)
 library(MASS)
@@ -80,7 +81,7 @@ p <- ggplot() +
   stat_ellipse(data = balloons_df_right, aes(x = x, y = y, fill = balloon), colour = "black",
                geom = "polygon", show.legend = FALSE) +
   annotate("text", x = c(age - 4, age + 4), y = c(0, 0), label = age, size = 10) +
-  annotation_raster(bdayboy, xmin = age - 1.6, xmax = age + 1.6, ymin = -6, ymax = 7) +
+  annotation_raster(bdayboy, xmin = age - 1.45, xmax = age + 1.45, ymin = -6, ymax = 7) +
   scale_x_continuous(breaks = seq(age - 6, age + 6, 2)) +
   ylim(-6, 7) +
   labs(title = paste0("Fijne verjaardag, ", name, "!"),
